@@ -1,0 +1,130 @@
+<!--Here is the metadata -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mediterranean Catering</title>
+  <!--This is where my JavaScript validation starts. I have two functions that are both activated onblur. I am testing to see whether the user enters the new password twice, as directed, and I'm also making sure that they enter a username. The user will get an alert message as to whether the passwords match/don't match; they'll also receive an alert message if they enter a password or if they don't.-->
+  <script type="text/javascript">
+    function validatePassword()
+    {
+      var pass1 = document.getElementById("password").value;
+      var pass2 = document.getElementById("password_reenter").value;
+
+      if (pass1 == pass2)
+      {
+        alert("Passwords match");
+        return true;
+      }
+      else
+      {
+        alert("Passwords do not match");
+        return false;
+      }
+        return false;
+    }
+    function validateUsername()
+    {
+      var username = document.getElementById("username").value;
+
+      if (username != 0)
+      {
+        alert("Username is OK");
+        return true;
+      }
+      if (username == 0)
+      {
+        alert("Please enter a username");
+        return false;
+      }
+        return false;
+    }
+  </script>
+</head>
+<body>
+  <h1 id="myHeader">Welcome to Mediterranean Catering!</h1>
+  <h3 style="text-align:center;">Please complete this form to help us deliver the best catering experience for you. Your answers will be reviewed by one of our top-rated catering leads who will follow up with you to finalize your request.</h3>
+
+  <img src= "SkylerSmith.jpg" alt="restaurant window" class="center">
+  <!--First the user needs to enter some information about themselves. Here I am using text entry for the input. -->
+  <form>
+  <h3 class="heading">Your Information</h3> 
+          <label for="firstName">First Name:</label><br>
+          <input id="firstName" name = "name" type="text">
+          <span id="firstNamePrompt"></span><br>
+          <label for="lastName">Last Name:</label><br>
+          <input id="lastName" name="lastName" type="text">
+          <span id="lastNamePrompt"></span><br>
+          <label for="Phone">Phone number:</label><br>
+          <input id="Phone" name="Phone" type="text" placeholder="xxx-xxx-xxxx"><br>
+          <label for="Email">Email:</label><br>
+          <input id="Email" name="Email" type="text">
+          <span id="emailPrompt"><br>
+  <h3 class="heading">Please enter a username and password for your account.</h3>
+          <label for="username">Username:</label><br>
+          <input id="username" name = "name" type="text" onblur="return validateUsername();"><br>
+          <label for="password">Password:</label><br>
+          <input id="password" name="password" type="text"><br>
+          <label for="password_reenter">Re-enter your password:</label><br>
+          <input id="password_reenter" name="password_reenter" type="text" onblur="return validatePassword();"><br>
+  <!--Next I am asking the customer about their event. I am using radio buttons as the input entry method.-->
+  <h3 class="heading">Event Type:</h3>
+  <input type="radio" name="event" value="Wedding">Wedding<br>
+  <input type="radio" name="event" value="Birthday">Birthday<br>
+  <input type="radio" name="event" value="Anniversary">Anniversary<br>
+  <input type="radio" name="event" value="Company Event">Company Event<br>
+  <input type="radio" name="event" value="Other">Other<br>
+
+  If "Other", please explain: <br>
+  <input type="text" name="Other"><br>
+
+  <h3 class="heading">Date of Event:</h3>
+  <input type="date" name="event date"><br>
+
+  <h3 class="heading">Please select what you will need for your event:</h3>
+  <input type="radio" name="food" value="Food only">Food only<br>
+  <input type="radio" name="food" value="Food and seating area setup">Food and seating area setup<br>
+
+  <!--Now I am asking the user to tell me what kind of food they want and how many servings per each item. I am using checkboxes for the items and fields where the user can put the number of servings.-->
+  <h3 class="heading">Please select what kind of food you would like and how many servings per dish:</h3>
+  <input type="checkbox" name="food" value="Briam">Briam<br>
+  <input type="number" name="quantity" min="1"><br>
+  <input type="checkbox" name="food" value="Pita Bread">Pita bread<br>
+  <input type="number" name="quantity" min="1"><br>
+  <input type="checkbox" name="food" value="Extra Feta Cheese">Feta cheese <br>
+  <input type="number" name="quantity" min="1"><br>
+  <input type="checkbox" name="food" value="Greek Salad">Greek salad <br>
+  <input type="number" name="quantity" min="1"><br>
+  <input type="checkbox" name="food" value="baklava">Baklava <br>
+  <input type="number" name="quantity" min="1"><br>
+  <input type="checkbox" name="food" value="Gyro">Gyro <br>
+  <input type="number" name="quantity" min="1"><br>
+  <input type="checkbox" name="food" value="Falafel">Falafel<br>
+  <input type="number" name="quantity" min="1"><br>
+
+  <h3 class="heading">Please select any additional food options:</h3>
+ <input type="checkbox" name="option" value="Vegan">Vegan <br>
+ <input type="number" name="quantity" min="1"><br> 
+ <input type="checkbox" name="option" value="Vegetarian">Vegetarian <br>
+ <input type="number" name="quantity" min="1"><br>
+ <input type="checkbox" name="option" value="Gluten free">Gluten free <br>
+ <input type="number" name="quantity" min="1"><br>
+ <input type="checkbox" name="option" value="Dairy free">Dairy free <br>
+ <input type="number" name="quantity" min="1"><br>
+
+ <br>
+ 
+</form>
+
+<h3 style="text-align:center;">Thank you for your order! One of our catering leads will follow up with you within 24 hours. Please make sure that your contact information is correct. </h3>
+<!--Here I have the company information. -->
+<footer id="footer">
+  Mediterranean Catering <br>
+  1835 Olive Avenue<br>
+  Brooklyn, NY, USA<br>
+  &copy; 2020 Mediterranean Catering. All rights reserved. </footer>
+
+</body>
+</html>

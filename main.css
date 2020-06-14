@@ -1,0 +1,30 @@
+/*First I have some descriptors for the body of the page. Then I have two classes and two IDs. The "heading" class is my main heading at the top of the page. The "center" class is for my image. The "myHeader" ID is for the headings on the page, and the "footer" ID is for the footer.*/
+body {
+  background-color: #ff7f50;
+  color: #000;
+  font-family:"Arial", Arial, sans serif; 
+}
+
+.heading {
+  background-color: aqua;
+  color: purple;
+  font-family: 'Courier New', Courier, monospace;
+}
+.center {
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  width: 50%;
+}
+#myHeader {
+  background-color: aquamarine;
+  color:black;
+  text-align:center;
+}
+#footer {
+  background-color: purple;
+  color: wheat;
+  text-align: center;
+  font-family: fantasy;
+}
+
